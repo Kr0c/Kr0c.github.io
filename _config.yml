@@ -1,9 +1,9 @@
 # Site settings
-title: Jiapeng’s Blog
+title: Jiapeng’s Storybook
 email: jiapeng.win@gmail.com
-description: “Welcome to Jiapeng’s Blog” # for Google search result
+description: Jiapeng’s Blog | Tech&Thinking
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: http://jiapeng.win # the base hostname & protocol for your site
+url: http://jiapeng.win
 permalink: /:year/:title
 
 
@@ -21,7 +21,7 @@ github:   jiapengwin
 
 
 # Comment
-disqus_shortname: FPXuZE2hYk
+disqus_shortname: Jiapeng
 
 
 # Google Analytics
