@@ -1,10 +1,10 @@
 # Site settings
 title: Jiapeng’s Storybook
 email: jiapeng.win@gmail.com
-description: Jiapeng’s Blog | Tech&Thinking
+description: “Jiapeng’s Storyboard | Tech&Thinking. This blog aims to take notes of my programming learning. Besides, it also shares book reviews and my true feelings.”
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: http://jiapeng.win
-permalink: /:year/:title
+# permalink: /:year/:title.html
 
 
 # Sidebar filter
