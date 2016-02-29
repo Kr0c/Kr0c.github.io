@@ -221,7 +221,7 @@ Python的`multiprocessing`模块不但支持多进程，其中`managers`子模�
 
 `manager`模块运行在一台海外VPS，`worker1`也运行在该VPS，`worker2`运行在本地主机，三个进程正常配合运行。下图中左、中、右三个窗口分别对应`manager`, `worker1`, `worker2`。
 
-![测试截图](/images/doubancrawler.png)
+[![测试截图](/images/doubancrawler.png)](http://jiapeng.win/images/doubancrawler.png)
 
 ## 6. 数据分析
 
