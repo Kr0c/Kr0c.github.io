@@ -119,6 +119,7 @@ tags: Python
 - 加入的小组
 - 最近活跃时间
 
+
 使用[BeautifulSoup][6]过滤网页中各类标签并且配合正则，便可以从网页中取出所需信息。例如：
 
     # 获取网页正文中class='user-info'的div标签
