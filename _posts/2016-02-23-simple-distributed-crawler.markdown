@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 自己造轮子：一个简单的分布式网络爬虫
+title: 自己造轮子：一个简单的分布式爬虫
 tags: Python
 ---
 
