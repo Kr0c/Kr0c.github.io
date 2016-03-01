@@ -7,7 +7,6 @@
   <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
   <meta name="keywords" content="Kr0c Blog Jekyll Pages 博客 技术 Jiapeng">
-  <meta name="baidu-site-verification" content="x9DfN2rmR3" />
 
   <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600|Droid+Sans+Mono' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
@@ -17,4 +16,14 @@
   <link rel="bookmark" href="/assets/img/favicon.ico"/>
 
   <script src="{{ "/assets/js/prefixfree.js" | prepend: site.baseurl }}"></script>
+  
+  <script>
+  (function(){
+      var bp = document.createElement('script');
+      bp.src = '//push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+  })();
+  </script>
+            
 </head>
