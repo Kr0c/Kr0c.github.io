@@ -26,46 +26,48 @@ tags: Python
 
 代码片段（已考虑需要验证码和不需验证码两种情况）：
 
-{% highlight python %}
-payload = {
-	'form_email': 'example@email.com',
-    'form_password': 'password',
-    'remember': 'on'
-}
+	#!/usr/bin/env python
+	# -*- coding: utf-8 -*-
+	__author__ = 'Kr0c'
 	
-def login(self):
-    session = requests.session()
-    session.headers.update(self.headers)
+	payload = {
+	    'form_email': 'example@email.com',
+        'form_password': 'password',
+        'remember': 'on'
+    }
+	
+	def login(self):
+        session = requests.session()
+        session.headers.update(self.headers)
 
-    # if needs captcha
-    try:
-        # get url_captcha, captcha-solution should be POST together with captcha_id
-        login_page = BeautifulSoup(session.get(self.url_login).content, 'lxml')
-        url_captcha = login_page.find('img', id='captcha_image')['src']
-        captcha_id = url_captcha[38:65]
+        # if needs captcha
+        try:
+            # get url_captcha, captcha-solution should be POST together with captcha_id
+            login_page = BeautifulSoup(session.get(self.url_login).content, 'lxml')
+            url_captcha = login_page.find('img', id='captcha_image')['src']
+            captcha_id = url_captcha[38:65]
 
-        # show captcha image
-        img_buf = requests.get(url_captcha, stream=True, headers=self.headers).content
-        Image.open(cStringIO.StringIO(img_buf)).show()
-        print '[+] 验证码显示成功！'
-        captcha_solution = raw_input('[+] 请输入验证码：\n>>> ')
+            # show captcha image
+            img_buf = requests.get(url_captcha, stream=True, headers=self.headers).content
+            Image.open(cStringIO.StringIO(img_buf)).show()
+            print '[+] 验证码显示成功！'
+            captcha_solution = raw_input('[+] 请输入验证码：\n>>> ')
             
-        # add captcha-solution & captcha-id to Form Data
-        self.payload['captcha-solution'] = captcha_solution
-        self.payload['captcha-id'] = captcha_id
+            # add captcha-solution & captcha-id to Form Data
+            self.payload['captcha-solution'] = captcha_solution
+            self.payload['captcha-id'] = captcha_id
             
-    # if no captcha
-    except:
-        pass
+        # if no captcha
+        except:
+            pass
 
-    # login and return session
-    login = session.post(self.url_login, data=self.payload)
-    login_code = BeautifulSoup(login.content, 'lxml').find('html')['lang']
+        # login and return session
+        login = session.post(self.url_login, data=self.payload)
+        login_code = BeautifulSoup(login.content, 'lxml').find('html')['lang']
 
-    if login_code == 'zh-cmn-Hans':
-        print '[+] 登录成功！'
-        return session
-{% endhighlight %}
+        if login_code == 'zh-cmn-Hans':
+            print '[+] 登录成功！'
+            return session
             
 登录成功后，可以从返回的session中获取登录后的浏览器头headers和cookies，建议将它们写入`session.txt`文件，下次登录时直接从文件读取。
 
