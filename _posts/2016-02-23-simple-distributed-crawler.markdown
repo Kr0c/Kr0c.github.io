@@ -179,6 +179,8 @@ tags: Python
 
 Python的`multiprocessing`模块不但支持多进程，其中`managers`子模块还支持把多进程分布到多台机器上。一个服务进程可以作为调度者，将任务分布到其他多个进程中，依靠网络通信。由于`managers`模块封装很好，不必了解网络通信的细节，就可以很容易地编写分布式多进程程序。(*References: [分布式进程－廖雪峰的官方网站][8]*)
 
+`manager`模块负责管理`todo`, `done`和不断获取新的ID，并将`todo`中的任务分发给多个`worker`，`worker`抓取用户信息并返回`manager`保存（亦可改为不回传用户信息，直接由`worker`保存）。
+
 部分代码：
     
     #!/usr/bin/env python
