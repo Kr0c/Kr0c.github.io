@@ -14,7 +14,7 @@ Git是一个免费并且开源的分布式版本控制系统，最初由林纳�
 
 ## Notes
 
-#### 1.创建版本库
+### 1.创建版本库
 
 创建一个空目录，然后通过`git init`命令把这个目录变成Git可以管理的仓库：
 
@@ -23,7 +23,7 @@ Git是一个免费并且开源的分布式版本控制系统，最初由林纳�
     $ git init
     Initialized empty Git repository in /Users/michael/learngit/.git/
     
-#### 2.添加和提交
+### 2.添加和提交
 
 把一个文件放到Git仓库只需要两步：
 
@@ -42,7 +42,7 @@ Git是一个免费并且开源的分布式版本控制系统，最初由林纳�
 
 ![git commit](/images/git-notes2.jpeg)
  
-#### 3.版本回退
+### 3.版本回退
 
 - `git status`: 查看仓库当前的状态
 - `git diff`: 查看具体修改内容
@@ -68,14 +68,14 @@ Git是一个免费并且开源的分布式版本控制系统，最初由林纳�
     
 Git的版本回退速度非常快，因为Git在内部有个指向当前版本的HEAD指针，当你回退版本的时候，Git仅仅是改变HEAD指针的指向。
 
-#### 4.远程库（Github）
+### 4.远程库（Github）
 
 由于本地Git仓库和GitHub仓库之间的传输是通过SSH加密的，在使用Github之前，需先进行以下设置：
 
 1. 创建SSH Key：`$ ssh-keygen -t rsa -C "youremail@example.com"`  
 2. 用户主目录下里找到`.ssh`目录，里面有`id_rsa`和`id_rsa.pub`两个文件，登陆GitHub，打开“SSH Keys”页面：在Key文本框里粘贴`id_rsa.pub`文件的内容。
 
-##### 添加远程库
+#### 添加远程库
 
 如果本地库有内容，而远程库没有内容，则在Github上“Create a new repo”，然后将本地仓库与之关联，这样就可以把本地仓库的内容推送到GitHub仓库了。
 
@@ -83,13 +83,13 @@ Git的版本回退速度非常快，因为Git在内部有个指向当前版本�
     
     $ git push -u origin master
     
-##### 从远程库克隆
+#### 从远程库克隆
 
 如果远程库有内容，而本地库没有内容，则直接从远程库克隆。
 
     $ git clone git@github.com:michaelliao/gitskills.git
     
-##### 从远程库pull
+#### 从远程库pull
 
 如果远程库与本地库都有内容，并且存在冲突，则本地库无法向远程库`push`，解决办法很简单，先用`git pull`把最新的提交从`origin/master`抓下来，然后，在本地合并，解决冲突，再推送。
 
@@ -99,7 +99,7 @@ Git的版本回退速度非常快，因为Git在内部有个指向当前版本�
     
     $ git push origin master
     
-#### 5.分支管理
+### 5.分支管理
 
 每次提交，Git都把它们串成一条时间线，这条时间线就是一个分支。创建版本库时自动创建`master`主分支。创建新的分支dev时，Git新建了一个指针叫`dev`，指向`master`相同的提交，再把`HEAD`指向`dev`，就表示当前分支在`dev`上。当`dev`上的工作完成了，直接把`master`指向`dev`的当前提交，就可以把`dev`合并到`master`上。
 
@@ -134,13 +134,13 @@ Git还提供了一个`stash`功能，可以把当前工作现场“储藏”起�
     ...
     $ git stash drop
     
-#### 6.自定义Git
+### 6.自定义Git
 
-##### 忽略特殊文件
+#### 忽略特殊文件
 
 在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。
 
-    # Mac OS X:
+    # MacOS X:
     .DS_Store
 
     # Python:
@@ -150,7 +150,7 @@ Git还提供了一个`stash`功能，可以把当前工作现场“储藏”起�
     # My Config:
     *.txt
 
-##### 配置别名
+#### 配置别名
 
 例如，用`git st`表示`git status`命令，`git br`表示`git branch`命令...：
 
