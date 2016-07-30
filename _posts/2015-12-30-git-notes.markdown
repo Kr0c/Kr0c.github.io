@@ -4,6 +4,8 @@ title: Git学习笔记
 tags: Toolbox
 ---
 
+![git.png](/images/git.png)
+
 ## Git
 
 Git是一个免费并且开源的分布式版本控制系统，最初由林纳斯·托瓦兹（Linus Torvalds）创作，于2005年以GPL发布。最初目的是为更好地管理Linux内核开发而设计。如今，Git已成为最受开发者欢迎的版本控制系统。
