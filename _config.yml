@@ -1,9 +1,9 @@
 # Site settings
-title: Kr0c’s Storybook | Tech&Thinking
-email: hi@kr0c.com
-description: Kr0c’s Storybook | Tech&Thinking. This blog aims to take notes of my programming learning. Besides, it also shares book reviews and my true feelings.
+title: Jiapeng’s Storybook | Tech&Thinking
+email: jiapengkang@gmail.com
+description: Jiapeng’s Storybook | Tech&Thinking. This blog aims to take notes of my programming learning. Besides, it also shares book reviews and my true feelings.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: http://kr0c.com
+url: http://blog.jiapengcs.com
 # permalink: /:year/:title.html
 
 
@@ -15,7 +15,7 @@ filter: 'tag'
 # Social account
 twitter:  _neverm0re
 weibo:    3130392561 # userID e.g. 3130392561
-github:   kr0c
+github:   jiapengcs
 # codepen:  username
 # dribbble: username
 
