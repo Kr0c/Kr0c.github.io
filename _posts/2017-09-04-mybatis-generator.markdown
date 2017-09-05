@@ -114,3 +114,5 @@ MyBatis Generator有很多种运行方式，如Java代码，基于Maven/Eclipse�
 ![image](/images/mbg2.png)
 
 为了不浪费宝贵的生命，建议早日拥抱MyBatis Generator。
+
+> 完整代码见Github：[mybatis-generator-demo](https://github.com/jiapengcs/mybatis-generator-demo)
