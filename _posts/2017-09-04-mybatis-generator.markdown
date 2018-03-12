@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 代码生成神器：MyBatis Generator的使用
-tags: Toolbox
+tags: Java
 ---
 
 # 一、简介
